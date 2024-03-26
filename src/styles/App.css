@@ -1,1 +1,8 @@
 
+li{
+    display: flex;
+    justify-content: space-between;
+}
+.main{
+    width:50%;
+}

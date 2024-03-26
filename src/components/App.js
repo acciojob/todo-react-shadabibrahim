@@ -3,7 +3,7 @@ import React,{useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [task,setTask] = useState(["Coding"]);
+  const [task,setTask] = useState([]);
   const [inputTask, setInputTask] = useState("");
 
   const addTask= ()=>{
@@ -28,9 +28,9 @@ const App = () => {
         <div className="list">
           <ul>
           {
-            task.map((item)=>{
+            task.map((item,index)=>{
               return(
-                <li>
+                <li key={index}>
                   <span>{item}</span>
                   <button onClick={()=>deleteTask(item)}>Delete</button>
                 </li>
